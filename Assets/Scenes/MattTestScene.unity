@@ -725,6 +725,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc71668b2fbd614c89c05629966e6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1192733040
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5448996048036597592, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_Name
+      value: WeaponPickup (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597593, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448996048036597599, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+      propertyPath: weaponIndex
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+--- !u!114 &1294421639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+  m_PrefabInstance: {fileID: 1676809499689844775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560f06a23d71d28409ef0de06eed69a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1360476066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 5448996048036597592, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
     - target: {fileID: 1676809500839422659, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: abilities.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1676809500839422659, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: abilities.Array.data[3]
@@ -1228,6 +1300,10 @@ PrefabInstance:
       propertyPath: abilities.Array.data[4]
       value: 
       objectReference: {fileID: 1164364688}
+    - target: {fileID: 1676809500839422659, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: abilities.Array.data[5]
+      value: 
+      objectReference: {fileID: 1294421639}
     - target: {fileID: 1676809501376212660, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1284,6 +1360,46 @@ PrefabInstance:
       propertyPath: abilityIndicator
       value: 
       objectReference: {fileID: 1578217989}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: reloadTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: weaponName
+      value: Flame Thrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: weaponSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 964479e8f9fc98d44b736c1c9d656cb5, type: 3}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: weaponScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: weaponScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: abilityIndicator
+      value: 
+      objectReference: {fileID: 1578217989}
+    - target: {fileID: 3949964523644598744, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: numberOfFireballs
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961711355827716621, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961711355827716621, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961711355827716621, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.22
+      objectReference: {fileID: 0}
     - target: {fileID: 6434556047217115774, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1305,9 +1421,25 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6434556047670298219, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: weaponSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce3ad7f214b5800428acbc60eebf1b40, type: 3}
+    - target: {fileID: 6434556047670298219, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: abilityIndicator
       value: 
       objectReference: {fileID: 1578217989}
+    - target: {fileID: 7150647121452292358, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150647121452292358, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150647121452292358, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.22
+      objectReference: {fileID: 0}
     - target: {fileID: 7158484076569599270, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: weaponScale.x
       value: 3
