@@ -15,13 +15,14 @@ public class PlayerController : MonoBehaviour
     Camera cam;
     Rigidbody rb;
     int remainingJumps;
-
+    UICanvasBehaviour UICanvas;
     
 
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody>();
         cam = GetComponentInChildren<Camera>();
+        UICanvas = FindObjectOfType<UICanvasBehaviour>();
 
         Physics.gravity *= 2f;
 
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour
         remainingJumps = maxJumps;
 
         health = maxHealth;
+
+        UICanvas.SetHealth(health);
     }
 
     // Update is called once per frame
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int amount) {
         health = Mathf.Max(health - amount, 0);
+        UICanvas.SetHealth(health);
         if (health == 0) {
             Die();
         }
