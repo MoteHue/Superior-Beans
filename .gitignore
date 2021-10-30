@@ -528,3 +528,4 @@ windowsLibs.meta
 
 .DS_Store
 .vscode
+*/.DS_Store
