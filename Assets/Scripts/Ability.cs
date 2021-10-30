@@ -16,6 +16,7 @@ public class Ability : MonoBehaviour
 
     virtual public void Start() {
         UpdateIndicator();
+        if (abilityIndicator == null) abilityIndicator = FindObjectOfType<AbilityIndicator>();
     }
 
     public void UpdateIndicator() {
