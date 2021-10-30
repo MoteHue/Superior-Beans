@@ -78,8 +78,4 @@ public class PlayerController : MonoBehaviour
         Debug.Log("lmao you died");
     }
 
-    void Die() {
-        Debug.Log("lmao you died");
-    }
-
 }
