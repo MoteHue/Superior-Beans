@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.29260418, g: 0.7931389, b: 0.98883706, a: 1}
+  m_IndirectSpecularColor: {r: 0.2924896, g: 0.793138, b: 0.9888297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -425,10 +425,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 285017155}
-  - component: {fileID: 285017154}
   - component: {fileID: 285017153}
   - component: {fileID: 285017152}
   - component: {fileID: 285017156}
+  - component: {fileID: 285017154}
   m_Layer: 8
   m_Name: enemypumpkin
   m_TagString: Untagged
@@ -464,6 +464,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   maxJumps: 2
+  attackDamage: 10
   player: {fileID: 1686433427}
   playerController: {fileID: 0}
 --- !u!212 &285017154

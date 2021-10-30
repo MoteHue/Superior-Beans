@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
         GoToPlayer(0.1f);
         if (rb.velocity.y < -0.5f) Jump();
         if (Vector3.Distance(player.position, transform.position) < .5f) AttackPlayer(attackDamage);
+        transform.LookAt(player);
     }
 
     void GoToPlayer(float s){
