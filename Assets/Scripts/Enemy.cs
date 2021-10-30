@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public int maxHealth = 100;
-    Rigidbody rb;
+    public Rigidbody rb;
     bool canAttack = true;
     public int attackDamage = 10;
 
@@ -38,25 +38,18 @@ public class Enemy : MonoBehaviour
     }
 
     void Update(){
-        GoToPlayer(0.1f);
-        if (Vector3.Distance(player.position, transform.position) < .5f) AttackPlayer(attackDamage);
-        transform.LookAt(player);
+        DoBehaviour();
     }
 
-    void GoToPlayer(float s){
-        Vector3 direction = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).normalized;
-        if ((new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).magnitude > 1f)) {
-            rb.MovePosition(transform.position - s * direction);
-        }
-        //if ((xyDistance < 1f) && (player.position.y > transform.position.y)) Jump();
+    virtual public void DoBehaviour() {
+        // override this function
     }
-
 
     private void OnCollisionStay(Collision collision){
         if (collision.gameObject.layer == 6) AttackPlayer(10);
     }
 
-    void AttackPlayer(int damage){
+    public void AttackPlayer(int damage){
         if (canAttack){
             canAttack = false;
             //player.PlayerController.TakeDamage(damage);

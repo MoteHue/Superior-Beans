@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4258638872890565351}
-  - component: {fileID: 4258638872890565349}
   - component: {fileID: 4258638872890565348}
   - component: {fileID: 4258638872890565344}
   - component: {fileID: 4258638872890565350}
+  - component: {fileID: 2414140120770450299}
   m_Layer: 8
   m_Name: enemyskelly
   m_TagString: Enemy
@@ -35,23 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4258638872890565349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4258638872890565275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3064a291ea2ae458d5dc8ca0bf0c67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 1000
-  attackDamage: 10
-  player: {fileID: 1676809501376212660, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
-  playerController: {fileID: 1676809501376212661, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
 --- !u!65 &4258638872890565348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132,6 +115,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2414140120770450299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258638872890565275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9d0709704233c4280860e155020dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  rb: {fileID: 0}
+  attackDamage: 10
+  player: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &7833442310029336445
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,4 +228,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d8960225418724e988b642e602916c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4258638872890565349}
+  enemy: {fileID: 0}
