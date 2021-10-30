@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update() {
         timePassed += Time.deltaTime;
-        if (timePassed > timeBetweenSpawns && enemiesAlive < maxEnemies) {
+        if (timePassed > timeBetweenSpawns && enemiesAlive < maxEnemies && canSpawn) {
             timePassed = 0f;
             SpawnEnemy();
         }
