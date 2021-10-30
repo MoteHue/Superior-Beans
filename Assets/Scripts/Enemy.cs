@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public Transform player;
     public PlayerController playerController;
 
+    EnemySpawner enemySpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,10 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
         Physics.gravity *= 2f;
         remainingJumps = maxJumps;
+    }
+
+    public void Setup(EnemySpawner spawner) {
+        enemySpawner = spawner;
     }
 
     public void TakeDamage(int amount) {
@@ -87,6 +93,7 @@ public class Enemy : MonoBehaviour
     }
 
     void Die() {
+        if (enemySpawner != null) enemySpawner.AlertEnemyDied();
         Destroy(gameObject);
     }
 }
