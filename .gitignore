@@ -525,3 +525,6 @@ windowsLibs.meta
 *.dylib
 *.dylib.meta
 *.ilk.meta
+
+.DS_Store
+.vscode
