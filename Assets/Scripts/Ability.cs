@@ -25,7 +25,7 @@ public class Ability : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetKey(activationKeyCode) & canActivate) {
+        if (Input.GetKeyDown(activationKeyCode) & canActivate) {
             Activate();
         }
     }
@@ -35,9 +35,12 @@ public class Ability : MonoBehaviour
     }
 
     public void Activate() {
-        canActivate = false;
-        DoAbility();
-        StartCoroutine(DeactivateAfterTime(reloadTime));
+        if (canActivate) {
+            canActivate = false;
+            DoAbility();
+            StartCoroutine(DeactivateAfterTime(reloadTime));
+        }
+        
     }
 
     IEnumerator DeactivateAfterTime(float time) {
