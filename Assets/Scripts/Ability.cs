@@ -10,6 +10,10 @@ public class Ability : MonoBehaviour
     public AbilityIndicator abilityIndicator;
     public KeyCode activationKeyCode;
 
+    virtual public void Start() {
+        abilityIndicator.keyText.text = activationKeyCode.ToString();
+    }
+
     private void Update() {
         if (Input.GetKeyDown(activationKeyCode)) {
             Activate();
