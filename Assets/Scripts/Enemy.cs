@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public int health;
     public int maxHealth = 100;
     Rigidbody rb;
-    public int maxJumps = 2;
+    public int maxJumps = 1;
     int remainingJumps;
     bool canAttack = true;
     public int attackDamage = 10;
@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
     void GoToPlayer(float s){
         Vector3 direction = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).normalized;
         rb.MovePosition(transform.position - s*direction);
+        //if ((xyDistance < 1f) && (player.position.y > transform.position.y)) Jump();
     }
 
     void Jump(){
@@ -60,6 +61,12 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionStay(Collision collision){
         if (collision.gameObject.layer == 6) AttackPlayer(10);
+        else{
+            float xyDistance = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).magnitude;
+            if ((xyDistance < 10f) && (player.position.y > transform.position.y)) {
+                Jump();
+            }
+        }
     }
 
     void AttackPlayer(int damage){
