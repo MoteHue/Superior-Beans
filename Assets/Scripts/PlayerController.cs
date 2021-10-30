@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
         cam.transform.RotateAround(transform.position, transform.right, -lookVertical * lookSensitivity);
     }
 
+    private void FixedUpdate() {
+        
+    }
+
     private void OnCollisionEnter(Collision collision) {
         remainingJumps = maxJumps;
     }
