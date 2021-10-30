@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 1562097670}
-  - {fileID: 5623056366021395032}
+  - {fileID: 5623056366021395034}
   weaponImage: {fileID: 1354019925}
 --- !u!1 &1354019923
 GameObject:
@@ -2028,21 +2028,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: BFG
       objectReference: {fileID: 0}
+    - target: {fileID: 6216822698592245426, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6216822698592245427, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
       propertyPath: abilityIndicator
       value: 
       objectReference: {fileID: 1578217989}
-    m_RemovedComponents: []
+    - target: {fileID: 7689909260384540281, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689909260384540281, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
+      propertyPath: abilityIndicator
+      value: 
+      objectReference: {fileID: 1578217989}
+    m_RemovedComponents:
+    - {fileID: 6216822698592245427, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
---- !u!114 &5623056366021395032 stripped
+--- !u!114 &5623056366021395034 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6216822698592245427, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7689909260384540281, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
   m_PrefabInstance: {fileID: 1751773499381863659}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9973168ecb805234b91f1d0923b6f39b, type: 3}
+  m_Script: {fileID: 11500000, guid: 45f001746c2767a40b24f7499a3fcc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &5623056366021395035 stripped

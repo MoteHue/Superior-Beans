@@ -9,7 +9,7 @@ public class Ability : MonoBehaviour
     public Sprite UISprite;
     public Sprite weaponSprite;
     public Vector3 weaponScale;
-    bool canActivate = true;
+    public bool canActivate = true;
     public AbilityIndicator abilityIndicator;
     public KeyCode activationKeyCode;
     public string weaponName; 
@@ -35,21 +35,18 @@ public class Ability : MonoBehaviour
     }
 
     public void Activate() {
-        if (canActivate) {
-            canActivate = false;
-            DoAbility();
-            StartCoroutine(DeactivateAfterTime(reloadTime));
-        }
+        canActivate = false;
+        DoAbility();
+        StartCoroutine(DeactivateAfterTime(reloadTime));
     }
 
     IEnumerator DeactivateAfterTime(float time) {
         abilityIndicator.timeToReload = time;
         abilityIndicator.reloadText.gameObject.SetActive(true);
-        Color defaultImageColour = abilityIndicator.image.color;
         abilityIndicator.image.color = new Color32(100, 100, 100, 255);
         yield return new WaitForSecondsRealtime(time);
         abilityIndicator.reloadText.gameObject.SetActive(false);
-        abilityIndicator.image.color = defaultImageColour;
+        abilityIndicator.image.color = Color.white;
         canActivate = true;
     }
 }
