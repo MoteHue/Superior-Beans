@@ -8,11 +8,12 @@ public class DebugAbility : Ability
     public Color rayColour;
     public int damageAmount = 40;
 
-    private void Start() {
+    public override void Start() {
+        base.Start();
         cam = FindObjectOfType<Camera>();
     }
 
-    public override void doAbility() {
+    public override void DoAbility() {
         RaycastHit hit;
         bool hitObject = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity);
         if (hitObject) {

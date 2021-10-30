@@ -6,24 +6,30 @@ public class Ability : MonoBehaviour
 {
 
     public int reloadTime;
+    public Sprite UISprite;
     bool canActivate = true;
     public AbilityIndicator abilityIndicator;
     public KeyCode activationKeyCode;
 
+    virtual public void Start() {
+        abilityIndicator.keyText.text = activationKeyCode.ToString();
+        abilityIndicator.image.sprite = UISprite;
+    }
+
     private void Update() {
-        if (Input.GetKeyDown(activationKeyCode)) {
+        if (Input.GetKey(activationKeyCode) & canActivate) {
             Activate();
         }
     }
 
-    virtual public void doAbility() {
+    virtual public void DoAbility() {
         // Overridden by abilities
     }
 
     public void Activate() {
         if (canActivate) {
             canActivate = false;
-            doAbility();
+            DoAbility();
             StartCoroutine(DeactivateAfterTime(reloadTime));
         }
     }

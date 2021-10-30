@@ -10,6 +10,7 @@ public class AbilityIndicator : MonoBehaviour
     public Text reloadText;
     public float timeToReload;
     public Image image;
+    public Text keyText;
 
     private void Update() {
         if (reloadText.IsActive()) {
