@@ -1129,6 +1129,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1676809500839422659, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
+      propertyPath: weaponPickup
+      value: 
+      objectReference: {fileID: 5448996048036597592, guid: cab7498a54f93084cbb78e139633cf72, type: 3}
+    - target: {fileID: 1676809500839422659, guid: bc5730985ac355247a8f44a1b2d361c8, type: 3}
       propertyPath: abilities.Array.size
       value: 4
       objectReference: {fileID: 0}
