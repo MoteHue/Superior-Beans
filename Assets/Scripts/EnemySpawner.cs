@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     int enemiesAlive;
     public float timeBetweenSpawns = 3f;
     float timePassed;
+    public bool canSpawn = true;
 
     void SpawnEnemy() {
         enemiesAlive++;
