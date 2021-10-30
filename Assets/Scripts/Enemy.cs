@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public int maxJumps = 2;
     int remainingJumps;
     bool canAttack = true;
+    public int attackDamage = 10;
 
     public Transform player;
     public PlayerController playerController;
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
     void Update(){
         GoToPlayer(0.1f);
         if (rb.velocity.y < -0.5f) Jump();
-        if (Vector3.Distance(player.position, transform.position) < .5f) {AttackPlayer(10); Debug.Log("dfuish");}
+        if (Vector3.Distance(player.position, transform.position) < .5f) AttackPlayer(attackDamage);
     }
 
     void GoToPlayer(float s){
