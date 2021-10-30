@@ -11,6 +11,7 @@ public class AbilityIndicator : MonoBehaviour
     public float timeToReload;
     public Image image;
     public Text keyText;
+    public Text weaponName;
 
     private void Update() {
         if (reloadText.IsActive()) {
