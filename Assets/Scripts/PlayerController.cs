@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
     public float lookSensitivity = 2f;
 
+    public int health;
+    public int maxHealth = 100;
+
     Camera cam;
     Rigidbody rb;
     int remainingJumps;
@@ -24,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         remainingJumps = maxJumps;
+
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -56,6 +61,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         remainingJumps = maxJumps;
+    }
+
+    public void TakeDamage(int amount) {
+        health = Mathf.Max(health - amount, 0);
+        if (health == 0) {
+            Die();
+        }
+    }
+
+    void Die() {
+        Debug.Log("lmao you died");
     }
 
 }
