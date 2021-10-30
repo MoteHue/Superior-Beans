@@ -10,7 +10,7 @@ public class WeaponPickup : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("Player") && abilityManager.canPickUp) {
             abilityManager.ChangeWeapon(weaponIndex);
             Destroy(gameObject);
         }
