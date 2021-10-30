@@ -16,6 +16,10 @@ public class AbilityManager : MonoBehaviour
         abilities[index].UpdateIndicator();
         weaponImage.sprite = abilities[index].weaponSprite;
         weaponImage.transform.localScale = abilities[index].weaponScale;
+        abilities[index].abilityIndicator.reloadText.gameObject.SetActive(false);
+        abilities[index].abilityIndicator.timeToReload = 0;
+        abilities[index].canActivate = true;
+        abilities[index].abilityIndicator.image.color = Color.white;
     }
 
     private void Update() {
