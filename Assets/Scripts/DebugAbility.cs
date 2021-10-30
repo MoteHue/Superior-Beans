@@ -8,7 +8,8 @@ public class DebugAbility : Ability
     public Color rayColour;
     public int damageAmount = 40;
 
-    private void Start() {
+    public override void Start() {
+        base.Start();
         cam = FindObjectOfType<Camera>();
     }
 

@@ -6,11 +6,24 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public int maxHealth = 100;
+    Rigidbody rb;
+    public int maxJumps = 1;
+    int remainingJumps;
+    bool canAttack = true;
+    public int attackDamage = 10;
+
+    public Transform player;
+    public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>();
+        player = playerController.gameObject.transform;
+        rb = GetComponent<Rigidbody>();
         health = maxHealth;
+        Physics.gravity *= 2f;
+        remainingJumps = maxJumps;
     }
 
     public void TakeDamage(int amount) {
@@ -18,6 +31,56 @@ public class Enemy : MonoBehaviour
         if (health == 0) {
             Die();
         }
+    }
+
+    void Update(){
+        GoToPlayer(0.1f);
+        if (rb.velocity.y < -0.5f) Jump();
+        if (Vector3.Distance(player.position, transform.position) < .5f) AttackPlayer(attackDamage);
+    }
+
+    void GoToPlayer(float s){
+        Vector3 direction = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).normalized;
+        rb.MovePosition(transform.position - s*direction);
+        //if ((xyDistance < 1f) && (player.position.y > transform.position.y)) Jump();
+    }
+
+    void Jump(){
+        if (remainingJumps > 0){
+            Vector3 vel = rb.velocity;
+            vel.y = 0f;
+            rb.velocity = vel;
+            rb.AddForce(Vector3.up * 60000f);
+            remainingJumps--;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        remainingJumps = maxJumps;
+    }
+
+    private void OnCollisionStay(Collision collision){
+        if (collision.gameObject.layer == 6) AttackPlayer(10);
+        else{
+            float xyDistance = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).magnitude;
+            if ((xyDistance < 10f) && (player.position.y > transform.position.y)) {
+                Jump();
+            }
+        }
+    }
+
+    void AttackPlayer(int damage){
+        if (canAttack){
+            canAttack = false;
+            //player.PlayerController.TakeDamage(damage);
+            playerController.TakeDamage(damage);
+            StartCoroutine(DeactivateAfterTime(1f));
+        }
+    }
+
+    IEnumerator DeactivateAfterTime(float time) {
+        yield return new WaitForSecondsRealtime(time);
+        canAttack = true;
     }
 
     void Die() {
