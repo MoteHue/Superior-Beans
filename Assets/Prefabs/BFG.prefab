@@ -43,10 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f001746c2767a40b24f7499a3fcc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTime: 3
+  reloadTime: 2
   UISprite: {fileID: 21300000, guid: 8af82b3c3568de44d89ec847d5d095c2, type: 3}
   weaponSprite: {fileID: 21300000, guid: 2add80c12a3f9c24183c4e8868e5e357, type: 3}
   weaponScale: {x: 2, y: 2, z: 1}
+  canActivate: 1
   abilityIndicator: {fileID: 0}
   activationKeyCode: 323
   weaponName: BFG
