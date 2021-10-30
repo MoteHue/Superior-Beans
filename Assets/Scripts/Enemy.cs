@@ -55,6 +55,9 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         remainingJumps = maxJumps;
+    }
+
+    private void OnCollisionStay(Collision collision){
         if (collision.gameObject.layer == 6) AttackPlayer(10);
     }
 
@@ -68,13 +71,7 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator DeactivateAfterTime(float time) {
-        //abilityIndicator.timeToReload = time;
-        //abilityIndicator.reloadText.gameObject.SetActive(true);
-        //Color defaultImageColour = abilityIndicator.image.color;
-        //abilityIndicator.image.color = new Color32(100, 100, 100, 255);
         yield return new WaitForSecondsRealtime(time);
-        //abilityIndicator.reloadText.gameObject.SetActive(false);
-        //abilityIndicator.image.color = defaultImageColour;
         canAttack = true;
     }
 
