@@ -30,11 +30,6 @@ public class AbilityManager : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            ChangeWeapon(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) { 
-            ChangeWeapon(1);
-        }
+        
     }
 }
