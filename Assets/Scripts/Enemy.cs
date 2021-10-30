@@ -9,12 +9,16 @@ public class Enemy : MonoBehaviour
     Rigidbody rb;
     public int maxJumps = 2;
     int remainingJumps;
+    bool canAttack = true;
 
     public Transform player;
+    public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>();
+        player = playerController.gameObject.transform;
         rb = GetComponent<Rigidbody>();
         health = maxHealth;
         Physics.gravity *= 2f;
@@ -31,6 +35,7 @@ public class Enemy : MonoBehaviour
     void Update(){
         GoToPlayer(0.1f);
         if (rb.velocity.y < -0.5f) Jump();
+        if (Vector3.Distance(player.position, transform.position) < .5f) {AttackPlayer(10); Debug.Log("dfuish");}
     }
 
     void GoToPlayer(float s){
@@ -50,6 +55,27 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         remainingJumps = maxJumps;
+        if (collision.gameObject.layer == 6) AttackPlayer(10);
+    }
+
+    void AttackPlayer(int damage){
+        if (canAttack){
+            canAttack = false;
+            //player.PlayerController.TakeDamage(damage);
+            playerController.TakeDamage(damage);
+            StartCoroutine(DeactivateAfterTime(1f));
+        }
+    }
+
+    IEnumerator DeactivateAfterTime(float time) {
+        //abilityIndicator.timeToReload = time;
+        //abilityIndicator.reloadText.gameObject.SetActive(true);
+        //Color defaultImageColour = abilityIndicator.image.color;
+        //abilityIndicator.image.color = new Color32(100, 100, 100, 255);
+        yield return new WaitForSecondsRealtime(time);
+        //abilityIndicator.reloadText.gameObject.SetActive(false);
+        //abilityIndicator.image.color = defaultImageColour;
+        canAttack = true;
     }
 
     void Die() {
