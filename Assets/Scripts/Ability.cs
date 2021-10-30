@@ -6,12 +6,14 @@ public class Ability : MonoBehaviour
 {
 
     public int reloadTime;
+    public Sprite UISprite;
     bool canActivate = true;
     public AbilityIndicator abilityIndicator;
     public KeyCode activationKeyCode;
 
     virtual public void Start() {
         abilityIndicator.keyText.text = activationKeyCode.ToString();
+        abilityIndicator.image.sprite = UISprite;
     }
 
     private void Update() {
