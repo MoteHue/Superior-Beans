@@ -1677,6 +1677,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8185050956463402044, guid: 6c477a37ab4af9d4597cb7c216e5ac4d, type: 3}
+      propertyPath: EnemyPrefab
+      value: 
+      objectReference: {fileID: 4258638872890565275, guid: d47401fc994a410dc837a339ac0f0ce9, type: 3}
+    - target: {fileID: 8185050956463402044, guid: 6c477a37ab4af9d4597cb7c216e5ac4d, type: 3}
       propertyPath: maxTotalEnemiesAllowed
       value: 5
       objectReference: {fileID: 0}
