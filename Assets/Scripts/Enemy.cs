@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         health = maxHealth;
         //Physics.gravity *= 2f;
-        remainingJumps = maxJumps;
+        //remainingJumps = maxJumps;
     }
 
     public void Setup(EnemySpawner spawner) {
