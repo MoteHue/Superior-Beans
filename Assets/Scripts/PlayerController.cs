@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
     void Die() {
         Debug.Log("lmao you died");
+        SceneManager.LoadScene("GameOver");
     }
 
 }
