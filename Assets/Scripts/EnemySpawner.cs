@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public bool canSpawn = true;
 
     void SpawnEnemy() {
-        enemiesAlive++;
+        if (canSpawn) enemiesAlive++;
         GameObject enemy = Instantiate(EnemyPrefab, transform.position, transform.rotation);
         enemy.GetComponent<Enemy>().Setup(this);
     }

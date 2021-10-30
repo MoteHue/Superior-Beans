@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class BFGProjectile : MonoBehaviour
 {
     public float moveSpeed = 0.5f;
     public int damageAmount = 10;
     Rigidbody rb;
+    public GameObject deathEffect;
 
     private void Start() {
         rb = FindObjectOfType<Rigidbody>();
@@ -27,6 +28,7 @@ public class Fireball : MonoBehaviour
     }
 
     void Die() {
+        if (deathEffect != null) Instantiate(deathEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
