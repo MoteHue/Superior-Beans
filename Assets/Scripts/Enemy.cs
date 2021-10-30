@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         player = playerController.gameObject.transform;
         rb = GetComponent<Rigidbody>();
         health = maxHealth;
-        Physics.gravity *= 2f;
+        //Physics.gravity *= 2f;
         remainingJumps = maxJumps;
     }
 
