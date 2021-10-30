@@ -11,7 +11,7 @@ public class Fireball : MonoBehaviour
     private void Start() {
         rb = FindObjectOfType<Rigidbody>();
         //rb.AddForce(transform.forward * moveSpeed);
-        Invoke(nameof(Die), 1f);
+        Invoke(nameof(Die), 3f);
     }
 
     // Update is called once per frame
