@@ -10,10 +10,11 @@ public class WeaponPickup : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.layer == 6) {
+        if (collision.gameObject.CompareTag("Player")) {
             abilityManager.ChangeWeapon(weaponIndex);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 
     // Start is called before the first frame update
