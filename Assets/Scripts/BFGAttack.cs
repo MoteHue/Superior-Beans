@@ -8,7 +8,8 @@ public class BFGAttack : Ability
     Camera cam;
     public GameObject projectile;
 
-    private void Start() {
+    override public void Start() {
+        base.Start();
         cam = FindObjectOfType<Camera>();
     }
 
