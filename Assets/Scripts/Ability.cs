@@ -15,7 +15,7 @@ public class Ability : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetKeyDown(activationKeyCode)) {
+        if (Input.GetKey(activationKeyCode) & canActivate) {
             Activate();
         }
     }
