@@ -704,6 +704,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1149971171}
     m_Modifications:
     - target: {fileID: 5623056366093538512, guid: 70a73306fb221e54da04cd4c42493d9d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623056366093538512, guid: 70a73306fb221e54da04cd4c42493d9d, type: 3}
       propertyPath: abilityIndicator
       value: 
       objectReference: {fileID: 1578217989}
@@ -713,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5623056366093538515, guid: 70a73306fb221e54da04cd4c42493d9d, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5623056366093538515, guid: 70a73306fb221e54da04cd4c42493d9d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1334,8 +1338,8 @@ Transform:
   m_LocalPosition: {x: -0.01, y: -0.29999995, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1562097669}
   - {fileID: 5623056366021395035}
+  - {fileID: 1562097669}
   m_Father: {fileID: 1686433427}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1352,8 +1356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilities:
-  - {fileID: 1562097670}
   - {fileID: 5623056366021395034}
+  - {fileID: 1562097670}
   weaponImage: {fileID: 1354019925}
 --- !u!1 &1354019923
 GameObject:
@@ -1702,7 +1706,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 683168412}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9973168ecb805234b91f1d0923b6f39b, type: 3}
   m_Name: 
@@ -1982,7 +1986,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6216822698592245424, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6216822698592245424, guid: 54ee17c28afb0c441ac79661cebdfbdc, type: 3}
       propertyPath: m_LocalPosition.x

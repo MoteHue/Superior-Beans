@@ -9,6 +9,13 @@ public class AbilityManager : MonoBehaviour
     int activeAbility = 0;
     public SpriteRenderer weaponImage;
 
+    private void Start() {
+        ChangeWeapon(0);
+        for (int i = 1; i < abilities.Count; i++) {
+            abilities[i].enabled = false;
+        }
+    }
+
     public void ChangeWeapon(int index) {
         abilities[activeAbility].enabled = false;
         activeAbility = index;
