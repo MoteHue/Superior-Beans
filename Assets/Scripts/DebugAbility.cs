@@ -12,7 +12,7 @@ public class DebugAbility : Ability
         cam = FindObjectOfType<Camera>();
     }
 
-    public override void doAbility() {
+    public override void DoAbility() {
         RaycastHit hit;
         bool hitObject = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity);
         if (hitObject) {

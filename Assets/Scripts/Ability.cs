@@ -16,14 +16,14 @@ public class Ability : MonoBehaviour
         }
     }
 
-    virtual public void doAbility() {
+    virtual public void DoAbility() {
         // Overridden by abilities
     }
 
     public void Activate() {
         if (canActivate) {
             canActivate = false;
-            doAbility();
+            DoAbility();
             StartCoroutine(DeactivateAfterTime(reloadTime));
         }
     }
