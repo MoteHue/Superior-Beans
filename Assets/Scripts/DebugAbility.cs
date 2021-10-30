@@ -6,6 +6,7 @@ public class DebugAbility : Ability
 {
     Camera cam;
     public Color rayColour;
+    public int damageAmount = 40;
 
     private void Start() {
         cam = FindObjectOfType<Camera>();
@@ -19,6 +20,14 @@ public class DebugAbility : Ability
         } else {
             Debug.DrawLine(transform.position, cam.transform.position + cam.transform.forward * 10f , rayColour, 0.5f, true);
         }
+
+        if (hit.collider != null) {
+            if (hit.collider.gameObject.TryGetComponent(out Enemy hitEnemy)) {
+                hitEnemy.TakeDamage(damageAmount);
+            }
+        }
+        
+        
         
     }
 
