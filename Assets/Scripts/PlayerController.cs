@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     int remainingJumps;
     UICanvasBehaviour UICanvas;
+
+    public bool isSlowed = false;
     
 
     // Start is called before the first frame update
