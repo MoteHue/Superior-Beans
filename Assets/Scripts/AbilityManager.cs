@@ -35,9 +35,7 @@ public class AbilityManager : MonoBehaviour
             abilities[index].abilityIndicator.timeToReload = 0;
             abilities[index].canActivate = true;
             abilities[index].abilityIndicator.image.color = Color.white;
-            Debug.Log("didthis");
             if (oldIndex != 0) {
-                Debug.Log("gothere");
                 GameObject newWeaponPickup = Instantiate(weaponPickup, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
                 newWeaponPickup.GetComponent<WeaponPickup>().weaponIndex = oldIndex;
             }
