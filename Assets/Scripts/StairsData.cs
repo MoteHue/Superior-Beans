@@ -8,6 +8,7 @@ public class StairsData : RoomData
     public RoomBehaviour.SideConnectionType upRight = RoomBehaviour.SideConnectionType.unset;
     public RoomBehaviour.SideConnectionType upFront = RoomBehaviour.SideConnectionType.unset;
     public RoomBehaviour.SideConnectionType upBack = RoomBehaviour.SideConnectionType.unset;
+    public RoomBehaviour.VertConnectionType upTop = RoomBehaviour.VertConnectionType.unset;
 
     public override void Rotate() {
         RoomBehaviour.SideConnectionType temp = left;
@@ -71,6 +72,8 @@ public class StairsData : RoomData
         room.top.front.backConn = upFront;
         room.top.backConn = upBack;
         room.top.back.frontConn = upBack;
+        room.top.topConn = upTop;
+        room.top.top.bottomConn = upTop;
         room.top.isGenerated = true;
     }
 }

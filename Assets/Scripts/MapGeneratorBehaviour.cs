@@ -85,6 +85,7 @@ public class MapGeneratorBehaviour : MonoBehaviour
                 int stairsX = Random.Range(0, width);
                 int stairsZ = Random.Range(0, length);
                 done = map[stairsX][y][stairsZ].SetStairs();
+                outside.ClearConns();
             }
 
         }
@@ -94,6 +95,7 @@ public class MapGeneratorBehaviour : MonoBehaviour
                 for (int z = 0; z < length; z++) {
                     if (y == height - 1) map[x][y][z].topConn = RoomBehaviour.VertConnectionType.floor;
                     map[x][y][z].Generate(y, height);
+                    outside.ClearConns();
                 }
             }
         }
