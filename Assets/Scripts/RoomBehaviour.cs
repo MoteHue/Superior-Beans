@@ -21,11 +21,10 @@ public class RoomBehaviour : MonoBehaviour
     }
 
     public bool SetStairs() {
-        if (bottomConn != VertConnectionType.unset) return false;
-        if (bottom.bottomConn == VertConnectionType.stairs) return false;
-        bottomConn = VertConnectionType.stairs;
+        if (topConn != VertConnectionType.unset) return false;
+        topConn = VertConnectionType.stairs;
 
-        bottom.topConn = VertConnectionType.stairs;
+        top.bottomConn = VertConnectionType.stairs;
 
         return true;
     }
