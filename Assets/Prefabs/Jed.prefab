@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4258638872890565351}
+  - component: {fileID: 4258638872890565349}
   - component: {fileID: 4258638872890565348}
   - component: {fileID: 4258638872890565344}
   - component: {fileID: 4258638872890565350}
-  - component: {fileID: -7620668811209938765}
+  - component: {fileID: -6044057746314252989}
   m_Layer: 8
-  m_Name: enemypumpkin
+  m_Name: Jed
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,6 +36,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4258638872890565349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258638872890565275}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3064a291ea2ae458d5dc8ca0bf0c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  attackDamage: 10
+  player: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!65 &4258638872890565348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2b411058d80222a42bc9672af6186669, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52380648a7ccd6248bdecf620af7213d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,7 +133,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7620668811209938765
+--- !u!114 &-6044057746314252989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,15 +142,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4258638872890565275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2051f8f9925ba234db53a2ed3260094b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2eded5c36dfdc2d4ca299c166fe92755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
-  rb: {fileID: 0}
-  attackDamage: 10
-  player: {fileID: 0}
-  playerController: {fileID: 0}
+  spriteR: {fileID: 0}
 --- !u!1 &7833442310029336445
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,4 +241,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d8960225418724e988b642e602916c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: -7620668811209938765}
+  enemy: {fileID: 4258638872890565349}

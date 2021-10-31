@@ -6,6 +6,10 @@ public class HealthbarBehaviour : MonoBehaviour
 {
     public Enemy enemy;
 
+    private void Start() {
+        if (enemy == null) enemy = GetComponentInParent<Enemy>();
+    }
+
     // Update is called once per frame
     void Update()
     {

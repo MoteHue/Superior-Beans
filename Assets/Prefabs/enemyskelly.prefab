@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4258638872890565348}
   - component: {fileID: 4258638872890565344}
   - component: {fileID: 4258638872890565350}
-  - component: {fileID: -7620668811209938765}
+  - component: {fileID: 2414140120770450299}
   m_Layer: 8
-  m_Name: enemypumpkin
+  m_Name: enemyskelly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,8 +104,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2b411058d80222a42bc9672af6186669, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: df93cadc7f0d437418abc92c38e9197d, type: 3}
+  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,7 +115,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7620668811209938765
+--- !u!114 &2414140120770450299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4258638872890565275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2051f8f9925ba234db53a2ed3260094b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d9d0709704233c4280860e155020dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
@@ -159,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7833442310029336445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.331, z: 0}
+  m_LocalPosition: {x: 0, y: 0.534, z: 0}
   m_LocalScale: {x: 0.07, y: 0.00957, z: 1}
   m_Children: []
   m_Father: {fileID: 4258638872890565351}
@@ -228,4 +228,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d8960225418724e988b642e602916c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: -7620668811209938765}
+  enemy: {fileID: 0}
