@@ -22,6 +22,7 @@ public class RoomBehaviour : MonoBehaviour
 
     public bool SetStairs() {
         if (bottomConn != VertConnectionType.unset) return false;
+        if (bottom.bottomConn == VertConnectionType.stairs) return false;
         bottomConn = VertConnectionType.stairs;
 
         bottom.topConn = VertConnectionType.stairs;
@@ -62,7 +63,7 @@ public class RoomBehaviour : MonoBehaviour
         }
 
         if (potentialRoomLayouts.Count == 0) {
-            Debug.LogWarning("No room fitted");
+            if (bottomConn != VertConnectionType.stairs) Debug.LogWarning("No room fitted. left: " + leftConn + ", right: " + rightConn + ", front: " + frontConn + ", back: " + backConn + ", top: " + topConn + ", bottom: " + bottomConn);
         }
         else {
             int index = Random.Range(0, potentialRoomLayouts.Count);
