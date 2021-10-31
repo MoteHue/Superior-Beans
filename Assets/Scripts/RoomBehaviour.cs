@@ -14,23 +14,22 @@ public class RoomBehaviour : MonoBehaviour
     public SideConnectionType frontConn = SideConnectionType.unset, backConn = SideConnectionType.unset;
     public VertConnectionType topConn = VertConnectionType.unset, bottomConn = VertConnectionType.unset;
 
-    private bool isGenerated = false;
+    public bool isGenerated = false;
 
     public bool IsGenerated() {
         return isGenerated;
     }
 
     public bool SetStairs() {
-        if (bottomConn != VertConnectionType.unset) return false;
-        if (bottom.bottomConn == VertConnectionType.stairs) return false;
-        bottomConn = VertConnectionType.stairs;
+        if (topConn != VertConnectionType.unset) return false;
+        topConn = VertConnectionType.stairs;
 
-        bottom.topConn = VertConnectionType.stairs;
+        top.bottomConn = VertConnectionType.stairs;
 
         return true;
     }
 
-    public void Generate() {
+    public void Generate(int y, int height) {
         if (possibleRotatedRooms == null) {
             possibleRotatedRooms = new List<RoomData>();
             foreach (GameObject room in possibleRooms) {
@@ -63,13 +62,15 @@ public class RoomBehaviour : MonoBehaviour
         }
 
         if (potentialRoomLayouts.Count == 0) {
-            if (bottomConn != VertConnectionType.stairs) Debug.LogWarning("No room fitted. left: " + leftConn + ", right: " + rightConn + ", front: " + frontConn + ", back: " + backConn + ", top: " + topConn + ", bottom: " + bottomConn);
+            Debug.LogWarning("No room fitted. left: " + leftConn + ", right: " + rightConn + ", front: " + frontConn + ", back: " + backConn + ", top: " + topConn + ", bottom: " + bottomConn);
         }
         else {
             int index = Random.Range(0, potentialRoomLayouts.Count);
             GameObject newRoom = Instantiate(potentialRoomLayouts[index].gameObject, transform);
             newRoom.SetActive(true);
             newRoom.GetComponent<RoomData>().SetConnections(this);
+            EnemySpawner spawner = newRoom.GetComponentInChildren<EnemySpawner>();
+            if (spawner != null) spawner.Configue(y, height);
         }
 
         isGenerated = true;
