@@ -93,7 +93,7 @@ public class MapGeneratorBehaviour : MonoBehaviour
             for (int x = 0; x < width; x++) {
                 for (int z = 0; z < length; z++) {
                     if (y == height - 1) map[x][y][z].topConn = RoomBehaviour.VertConnectionType.floor;
-                    map[x][y][z].Generate();
+                    map[x][y][z].Generate(y, height);
                 }
             }
         }

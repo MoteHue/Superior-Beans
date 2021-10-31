@@ -71,5 +71,6 @@ public class StairsData : RoomData
         room.top.front.backConn = upFront;
         room.top.backConn = upBack;
         room.top.back.frontConn = upBack;
+        room.top.isGenerated = true;
     }
 }
