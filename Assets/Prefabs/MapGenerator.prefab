@@ -47,6 +47,6 @@ MonoBehaviour:
   width: 4
   length: 4
   height: 5
-  roomWidth: 18
-  roomLength: 18
-  roomHeight: 6
+  roomWidth: 27
+  roomLength: 27
+  roomHeight: 9
