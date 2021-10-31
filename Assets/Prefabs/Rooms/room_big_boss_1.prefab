@@ -9284,6 +9284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3666129174644565170}
+  - component: {fileID: -6520737486055860103}
   m_Layer: 0
   m_Name: room_big_boss_1
   m_TagString: Untagged
@@ -9309,6 +9310,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6520737486055860103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879018747024296381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b389f8273de0799a6e1904657483db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 1
+  right: 1
+  front: 1
+  back: 1
+  top: 1
+  bottom: 1
 --- !u!1 &5882795080820153084
 GameObject:
   m_ObjectHideFlags: 0

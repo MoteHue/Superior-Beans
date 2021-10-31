@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 3808510324593639682, guid: a1fdf9b47b1d04cabbc3e5188daa33ef, type: 3}
+      propertyPath: height
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5267952911251893938, guid: a1fdf9b47b1d04cabbc3e5188daa33ef, type: 3}
       propertyPath: m_RootOrder
       value: 2

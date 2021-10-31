@@ -17,6 +17,12 @@ public class MapGeneratorBehaviour : MonoBehaviour
         GameObject outsideRoom = Instantiate(room, new Vector3(10000, 10000, 10000), Quaternion.identity);
         outside = outsideRoom.GetComponent<RoomBehaviour>();
 
+        FillMap();
+        GenerateFloors();
+        RoomBehaviour.ClearRotatedRooms();
+    }
+
+    private void FillMap() {
         map = new List<List<List<RoomBehaviour>>>();
         for (int x = 0; x < width; x++) {
             List<List<RoomBehaviour>> xSlice = new List<List<RoomBehaviour>>();
@@ -67,6 +73,27 @@ public class MapGeneratorBehaviour : MonoBehaviour
                         map[x][y][z - 1].front = newRoomBehaviour;
                     }
                     column.Add(newRoomBehaviour);
+                }
+            }
+        }
+    }
+
+    private void GenerateFloors() {
+        for (int y = 0; y < height; y++) {
+            bool done = false;
+            while (!done) {
+                int stairsX = Random.Range(0, width);
+                int stairsZ = Random.Range(0, length);
+                done = map[stairsX][y][stairsZ].SetStairs();
+            }
+
+        }
+
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                for (int z = 0; z < length; z++) {
+                    if (y == height - 1) map[x][y][z].topConn = RoomBehaviour.VertConnectionType.floor;
+                    map[x][y][z].Generate();
                 }
             }
         }

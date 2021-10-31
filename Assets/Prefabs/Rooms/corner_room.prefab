@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6487294397543740803}
+  - component: {fileID: -3766002099081533521}
   m_Layer: 0
   m_Name: corner_room
   m_TagString: Untagged
@@ -37,6 +38,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3766002099081533521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518717189948167410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b389f8273de0799a6e1904657483db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 3
+  right: 1
+  front: 3
+  back: 1
+  top: 1
+  bottom: 1
 --- !u!1 &1918998146271458963
 GameObject:
   m_ObjectHideFlags: 0
