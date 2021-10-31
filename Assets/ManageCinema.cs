@@ -7,13 +7,19 @@ public class ManageCinema : MonoBehaviour
 {
     public Text uitext;
     public CinemaTime ct;
+    public GameObject JedLyingDown;
+    public GameObject JedWibbly;
 
     private void Start() {
+
         StartCoroutine(nameof(doCinema));
+        
     }
 
     IEnumerator doCinema() {
         ct.ChangeCamera(0);
+        JedLyingDown.SetActive(true);
+        JedWibbly.SetActive(false);
         StartCoroutine(fillInText("The Tower..."));
         yield return new WaitForSecondsRealtime(3);
         ct.ChangeCamera(1);
@@ -25,6 +31,8 @@ public class ManageCinema : MonoBehaviour
         ct.ChangeCamera(3);
         StartCoroutine(fillInText("A princess!"));
         yield return new WaitForSecondsRealtime(6);
+        JedLyingDown.SetActive(false);
+        JedWibbly.SetActive(true);
         StartCoroutine(fillInText("Hold on a minute..."));
         ct.ChangeCamera(4);
     }
