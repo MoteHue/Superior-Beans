@@ -475,6 +475,7 @@ MonoBehaviour:
   - {fileID: 6434556047670298219}
   - {fileID: 1983706807073815397}
   - {fileID: 240225422849030556}
+  - {fileID: 3949964523644598744}
   weaponImage: {fileID: 1676809500506928242}
   canPickUp: 1
   weaponPickup: {fileID: 0}
@@ -791,6 +792,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6216822698592245424, guid: 7fb6a8a86d915544bb229b7a8b80deba, type: 3}
   m_PrefabInstance: {fileID: 1341260695308539069}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3949964523644598744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2615477236978167141, guid: 7fb6a8a86d915544bb229b7a8b80deba, type: 3}
+  m_PrefabInstance: {fileID: 1341260695308539069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560f06a23d71d28409ef0de06eed69a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1676809500104577723
 PrefabInstance:
   m_ObjectHideFlags: 0

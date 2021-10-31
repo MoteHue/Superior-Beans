@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ManageCinema : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ManageCinema : MonoBehaviour
     public CinemaTime ct;
     public GameObject JedLyingDown;
     public GameObject JedWibbly;
+    public Sprite JedBlownUp;
 
     private void Start() {
 
@@ -35,6 +37,13 @@ public class ManageCinema : MonoBehaviour
         JedWibbly.SetActive(true);
         StartCoroutine(fillInText("Hold on a minute..."));
         ct.ChangeCamera(4);
+        yield return new WaitForSecondsRealtime(3);
+        JedWibbly.GetComponent<SpriteRenderer>().sprite = JedBlownUp;
+        for (int i = 0; i < 255; i += 5) {
+            yield return new WaitForSecondsRealtime(0.01f);
+            JedWibbly.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, (byte)(255 - i));
+        }
+        SceneManager.LoadScene("MattTestScene");
     }
 
     IEnumerator fillInText(string text) {
