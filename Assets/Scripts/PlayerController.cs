@@ -43,11 +43,17 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
+        Vector3 vel = rb.velocity;
         if (direction.magnitude >= 0.1f) {
-            rb.MovePosition(transform.position + (transform.forward * moveVertical + transform.right * moveHorizontal) * moveSpeed * Time.deltaTime);
+            // rb.AddForce(Vector3.forward, ForceMode.VelocityChange);
+            vel.x = 0;
+            vel.z = 0;
+            vel += transform.right * moveHorizontal * moveSpeed;
+            vel += transform.forward * moveVertical * moveSpeed;
+            // rb.MovePosition(transform.position + (transform.forward * moveVertical + transform.right * moveHorizontal) * moveSpeed * Time.deltaTime);
+            rb.velocity = vel;
         }
         if (Input.GetKeyDown(KeyCode.Space) && remainingJumps > 0) {
-            Vector3 vel = rb.velocity;
             vel.y = 0f;
             rb.velocity = vel;
             rb.AddForce(Vector3.up * jumpForce);

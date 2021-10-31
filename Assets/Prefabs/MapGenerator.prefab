@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: {fileID: 8047591797009685024, guid: 099cfd432eec4b037a183dac478a3df1, type: 3}
-  width: 5
+  width: 4
   length: 4
-  height: 3
-  roomWidth: 63
-  roomLength: 63
-  roomHeight: 21
+  height: 5
+  roomWidth: 18
+  roomLength: 18
+  roomHeight: 6

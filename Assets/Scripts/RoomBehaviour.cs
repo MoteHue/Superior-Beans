@@ -71,6 +71,11 @@ public class RoomBehaviour : MonoBehaviour
             newRoom.GetComponent<RoomData>().SetConnections(this);
             EnemySpawner spawner = newRoom.GetComponentInChildren<EnemySpawner>();
             if (spawner != null) spawner.Configue(y, height);
+            WeaponPickup pickup = newRoom.GetComponentInChildren<WeaponPickup>();
+            if (pickup != null) {
+                pickup.weaponIndex = Random.Range(1, 6);
+                while (pickup.weaponIndex == 2) pickup.weaponIndex = Random.Range(1, 6);
+            }
         }
 
         isGenerated = true;

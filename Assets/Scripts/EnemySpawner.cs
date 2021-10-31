@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public List<GameObject> possibleEnemies;
     public GameObject EnemyPrefab;
     public int maxEnemiesAtOnce = 3;
     public int maxTotalEnemiesAllowed = 5;
@@ -36,6 +37,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void Configue(int y, int maxY) {
-
+        int i = Random.Range(0, possibleEnemies.Count);
+        EnemyPrefab = possibleEnemies[i];
     }
 }
