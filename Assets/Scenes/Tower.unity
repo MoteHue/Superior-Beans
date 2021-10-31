@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 31009682}
   - component: {fileID: 31009684}
   - component: {fileID: 31009683}
+  - component: {fileID: 31009685}
   m_Layer: 0
   m_Name: Cam5
   m_TagString: MainCamera
@@ -425,6 +426,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &31009685
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31009681}
+  m_Enabled: 1
 --- !u!1 &55015516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1304,6 @@ GameObject:
   m_Component:
   - component: {fileID: 371529992}
   - component: {fileID: 371529995}
-  - component: {fileID: 371529994}
   - component: {fileID: 371529993}
   m_Layer: 0
   m_Name: Cam1
@@ -1378,14 +1386,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!81 &371529994
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371529991}
-  m_Enabled: 1
 --- !u!20 &371529995
 Camera:
   m_ObjectHideFlags: 0
