@@ -34,4 +34,8 @@ public class EnemySpawner : MonoBehaviour
     public void AlertEnemyDied() {
         enemiesAlive--;
     }
+
+    public void Configue(int y, int maxY) {
+
+    }
 }

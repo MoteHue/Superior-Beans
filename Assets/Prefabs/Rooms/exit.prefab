@@ -22798,6 +22798,7 @@ MonoBehaviour:
   upRight: 1
   upFront: 1
   upBack: 1
+  upTop: 1
 --- !u!1 &5879324532585561415
 GameObject:
   m_ObjectHideFlags: 0
