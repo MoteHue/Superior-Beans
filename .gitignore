@@ -4,7 +4,6 @@
 #
 /[Ll]ibrary/
 /[Tt]emp/
-/[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
@@ -147,7 +146,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.obj
 *.iobj
 *.pch
 *.pdb
